@@ -21,13 +21,13 @@ export class NotesService {
     }
 
     updateNote(note) {
-        this.notes = this.notes.map(p => {
-            if (p.id == note.id) return { ...note };
-            return p;
+        this.notes = this.notes.map(n => {
+            if (n.id == note.id) return { ...note };
+            return n;
         });
     }
 
     deleteNote(id) {
-        this.notes = this.notes.filter(p => p.id != id);
+        this.notes = this.notes.filter(n => n.id != id);
     }
 }

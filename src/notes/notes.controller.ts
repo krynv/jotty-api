@@ -18,7 +18,7 @@ export class NotesController {
     @Get(':id')
     getNote(@Param() params) {
         console.log('get a single note', params.id);
-        return this.notesService.getNotes().filter(p => p.id == params.id);
+        return this.notesService.getNotes().filter(n => n.id == params.id);
     }
 
     @Post()
